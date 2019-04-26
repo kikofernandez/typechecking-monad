@@ -1,0 +1,69 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: aa38ac285e96212d423a8a5d9719e0eae8eb0bf76fa0fbe81956ef1c662adcf1
+
+name:           typechecker-oopl
+version:        0.1.0.0
+homepage:       https://github.com/#readme
+bug-reports:    https://github.com//issues
+author:         Anonymous
+maintainer:     Anonymous
+copyright:      MIT
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/
+
+library
+  exposed-modules:
+      Applicative.AST
+      Applicative.Typechecker
+      Backtrace.AST
+      Backtrace.Typechecker
+      Final.AST
+      Final.Typechecker
+      Initial.AST
+      Initial.Typechecker
+      MultiError.AST
+      MultiError.Typechecker
+      PhantomPhases.AST
+      PhantomPhases.Typechecker
+      Reader.AST
+      Reader.Typechecker
+      Warning.AST
+      Warning.Typechecker
+  other-modules:
+      Paths_typechecker_oopl
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , megaparsec >=7.0.4
+    , mtl
+  default-language: Haskell2010
+
+test-suite typechecker-oopl-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_typechecker_oopl
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , megaparsec >=7.0.4
+    , mtl
+    , typechecker-oopl
+  default-language: Haskell2010
