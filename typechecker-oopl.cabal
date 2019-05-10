@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: aa38ac285e96212d423a8a5d9719e0eae8eb0bf76fa0fbe81956ef1c662adcf1
+-- hash: 92bda232478d74c0a7eb6fe09918850a37a3dec3ab91856c357611a8d6abb9ef
 
 name:           typechecker-oopl
 version:        0.1.0.0
@@ -35,6 +35,8 @@ library
       Initial.Typechecker
       MultiError.AST
       MultiError.Typechecker
+      PhantomFunctors.AST
+      PhantomFunctors.Typechecker
       PhantomPhases.AST
       PhantomPhases.Typechecker
       Reader.AST
